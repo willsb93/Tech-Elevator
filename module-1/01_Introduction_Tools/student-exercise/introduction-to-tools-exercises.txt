@@ -251,17 +251,74 @@ drwxr-xr-x  4 williamtruccolorabuske  staff  128 Jan 13 18:57 ..
     others on our teams.
 ----
 
-$ <enter the Git command to display status>
-<type or copy-paste the result here>
+$ <git status>
+<
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
-$ <enter the Git command to "stage" all changes>
-<type or copy-paste the result here>
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
 
-$ <enter the Git command to save all "staged" changes>
-<type or copy-paste the result here>
+	modified:   ../../../../../../introduction-to-tools-exercises.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Helloworld.java.copy
+
+no changes added to commit (use "git add" and/or "git commit -a")
+>
+
+$ <git add -A>
+<
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ../../../../../../introduction-to-tools-exercises.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Helloworld.java.copy
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Techs-MacBook-Air-8:techelevator williamtruccolorabuske$ git add -A
+Techs-MacBook-Air-8:techelevator williamtruccolorabuske$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   ../../../../../../introduction-to-tools-exercises.txt
+	new file:   Helloworld.java.copy
+>
+
+$ <git commit -m "Your comment here">
+<
+[master d3399c9] exercice 15 commit
+ 2 files changed, 63 insertions(+), 12 deletions(-)
+ create mode 100755 module-1/01_Introduction_Tools/student-exercise/java-helloworld/src/main/java/com/techelevator/Helloworld.java.copy
+>
 
 $ git push origin master
-<type or copy-paste the result here>
+<
+Counting objects: 18, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (18/18), 2.51 KiB | 858.00 KiB/s, done.
+Total 18 (delta 5), reused 0 (delta 0)
+To https://bitbucket.org/te-cbus-cohort-10/williamtruccolorabuske-java-green-material.git
+   a1cba1a..d3399c9  master -> master
+>
 
 
 ----
@@ -272,8 +329,13 @@ $ rm Helloworld.java.copy
 
 The "rm" parameter is the name of the file to be deleted.
 
-$ <enter command to list all files and directories in order to confirm the file deletion>
-<type or copy-paste the result here>
+$ <ls -la>
+<
+total 8
+drwxr-xr-x  3 williamtruccolorabuske  staff   96 Jan 13 19:14 .
+drwxr-xr-x  4 williamtruccolorabuske  staff  128 Jan 13 18:57 ..
+-rwxr-xr-x  1 williamtruccolorabuske  staff  141 Jan 13 16:29 Helloworld.java
+>
 
 
 ----
@@ -294,8 +356,10 @@ command line when that seems natural.
 
 Regardless of the option you chose, check your new location.
 
-$ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+$ <pwd>
+<
+/Users/williamtruccolorabuske/Development/williamtruccolorabuske-java-green-material/module-1/01_Introduction_Tools/student-exercise/java-helloworld
+>
 
 
 ----
@@ -304,9 +368,11 @@ $ <enter command to display present working directory>
 ----
 
 $ mkdir docs
-$ <enter the command to change directory to "docs" using a relative path>
-$ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+$ <cd docs>
+$ <pwd>
+<
+/Users/williamtruccolorabuske/Development/williamtruccolorabuske-java-green-material/module-1/01_Introduction_Tools/student-exercise/java-helloworld/docs
+>
 
 ----
 19. Create a new file name "readme.txt" using Visual Studio Code, and add the text
@@ -323,10 +389,10 @@ Don't forget to save the file in Visual Studio Code!
     work so it can be reviewed by an instructor.
 ----
 
-$ <enter the Git command to display status>
+$ <git status>
 
-$ <enter the Git command to "stage" all changes>
+$ <git add -A>
 
-$ <enter the Git command to save all "staged" changes>
+$ <git commit -m "Comment">
 
-$ <enter the Git command to save local repository to BitBucket>
+$ <git push origin master>
