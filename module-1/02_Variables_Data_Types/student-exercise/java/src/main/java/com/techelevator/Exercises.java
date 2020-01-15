@@ -334,61 +334,96 @@ public class Exercises {
         neighbors. If each neighbor received and equal number of croissants,
         how many will be left with Marian?
         */
-
+					int totalCroissants = 59;
+					int neighboorsToGetCroissants = 8;
+					
+					int croissantsLeftToMarian = totalCroissants % neighboorsToGetCroissants;
         /*
         42. Marian also baked oatmeal cookies for her classmates. If she can
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
-
+					int oatmealCookiesGoal = 276;
+					int trayCookieCapacity = 12;
+					
+					int traysNeeded = oatmealCookiesGoal / trayCookieCapacity;
         /*
         43. Marian’s friends were coming over that afternoon so she made 480
         bite-sized pretzels. If one serving is equal to 12 pretzels, how many
         servings of bite-sized pretzels was Marian able to prepare?
         */
-
+					 
+					int totalPretzels = 480;
+					int oneServing = 12;
+					
+					int amountsOfServing = totalPretzels / oneServing;
         /*
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
-
+					int lemonCupcakes = 53;
+					int cupcakesLeftAtHome = 2;
+					int cupcakesInABox = 3;
+					
+					int boxesGiven = (lemonCupcakes - cupcakesLeftAtHome) / cupcakesInABox;
         /*
         45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
         were served equally to 12 people, how many carrot sticks were left
         uneaten?
         */
-
+					 
+					int carrotSticks = 74;
+					int peopleEating = 12;
+					
+					int carrotLeftOut = carrotSticks % peopleEating;
         /*
         46. Susie and her sister gathered all 98 of their teddy bears and placed
         them on the shelves in their bedroom. If every shelf can carry a
         maximum of 7 teddy bears, how many shelves will be filled?
         */
-
+					int teddyBears = 98;
+					int shelfCapacity = 7;
+					
+					int numberOfShelvesFilled = teddyBears / shelfCapacity;
         /*
         47. Susie’s mother collected all family pictures and wanted to place all of
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
-
+					int albumCapacity = 20;
+					int pictures = 480;
+					
+					int albumsNeeded = pictures / albumCapacity;
         /*
         48. Joe, Susie’s brother, collected all 94 trading cards scattered in his
         room and placed them in boxes. If a full box can hold a maximum of 8
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
-
+					int tradingCards = 94;
+					int boxCapacity = 8;
+					
+					int boxesFilled = tradingCards / boxCapacity;
+					int cardsInUnfilledBox = tradingCards - (boxesFilled * boxCapacity); 
+							
         /*
         49. Susie’s father repaired the bookshelves in the reading room. If he has
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
-
+					int numberOfBooks = 210;
+					int shelvesAvailable = 10;
+					
+					int booksPerShelf = numberOfBooks / shelvesAvailable;
         /*
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
-
+					int croissants = 17;
+					int guests = 7;
+					
+					int croissantsPerGuest = croissants / guests;
         /*
             CHALLENGE PROBLEMS
         */
