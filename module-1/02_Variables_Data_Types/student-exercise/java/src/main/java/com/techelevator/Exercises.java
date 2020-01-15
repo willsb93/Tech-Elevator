@@ -404,8 +404,8 @@ public class Exercises {
 					int tradingCards = 94;
 					int boxCapacity = 8;
 					
-					int boxesFilled = tradingCards / boxCapacity;
-					int cardsInUnfilledBox = tradingCards - (boxesFilled * boxCapacity); 
+					int boxesFilled = tradingCards % boxCapacity;
+					 
 							
         /*
         49. Susie’s father repaired the bookshelves in the reading room. If he has
