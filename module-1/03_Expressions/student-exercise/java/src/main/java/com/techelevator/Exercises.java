@@ -10,7 +10,10 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
-		return false;
+		if (weekday && !vacation) {
+			return false;
+		}
+		return true;
 	}
 
 	/*
@@ -60,9 +63,18 @@ public class Exercises {
 	 diff21(22) → 2
 	 diff21(-10) → 31
 	 */
+	
 	public int diff21(int n) {
-		return 0;
+
+	
+	{
+		if (n < 22){
+		return 21 -n;}
 	}
+	
+	return (n-21) * 2;
+}
+		
 
 	/*
 	 5. We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23.
@@ -73,6 +85,9 @@ public class Exercises {
 	 parrotTrouble(false, 6) → false
 	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
+		if(talking && (hour < 7) || (talking && (hour >20))){
+			return true;
+		}
 		return false;
 	}
 
@@ -83,8 +98,16 @@ public class Exercises {
 	 makes10(1, 9) → true
 	 */
 	public boolean makes10(int a, int b) {
+		
+		if ( (a == 10 || b == 10) || (a+b == 10))
+				{
+			return true;
+		}
+		
 		return false;
 	}
+	
+		
 
 	/*
 	 7. Given 2 int values, return true if one is negative and one is positive. Except if the parameter
@@ -94,8 +117,18 @@ public class Exercises {
 	 posNeg(-4, -5, true) → true
 	 */
 	public boolean posNeg(int a, int b, boolean negative) {
-		return false;
+	
+	
+	if((negative == true && a < 0 && b < 0) || ((negative == false && a < 0 && b > 0) || (negative == false && a > 0 && b < 0))){
+		return true;
 	}
+	return false;
+}
+
+
+	
+
+	
 
 	/*
 	 8. Return true if the given non-negative number is a multiple of 3 or a multiple of 5.
@@ -105,6 +138,11 @@ public class Exercises {
 	 or35(8) → false
 	 */
 	public boolean or35(int n) {
+		int x = n % 3;
+		int y = n % 5;
+		if(x == 0 || y == 0){
+			return true;
+		}
 		return false;
 	}
 
@@ -115,6 +153,10 @@ public class Exercises {
 	 icyHot(2, 120) → false
 	 */
 	public boolean icyHot(int temp1, int temp2) {
+		
+		if (temp1 > 100 || temp2 > 100 && temp1 < 0 || temp2 < 0) {
+			return true;
+		}
 		return false;
 	}
 
@@ -125,6 +167,9 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
+		if (a >= 10 && a <= 20 || b >= 10 && b <=20) {
+			return true;
+		}
 		return false;
 	}
 
@@ -136,6 +181,9 @@ public class Exercises {
 	 hasTeen(20, 10, 13) → true
 	 */
 	public boolean hasTeen(int a, int b, int c) {
+		if (a >= 13 && a <= 19 || b >= 13 && b <=19 || c >=13 && c <=19) {
+			return true;
+		}
 		return false;
 	}
 
@@ -147,8 +195,18 @@ public class Exercises {
 	 loneTeen(13, 13) → false
 	 */
 	public boolean loneTeen(int a, int b) {
+		
+		if ((a >=13 && a <=19) && (b <13 || b >19)) {
+			return true;
+		}
+		else if ((b >=13 && b <=19) && (a <13 || a > 19)) {
+			return true;
+		}
+		
+		
 		return false;
 	}
+	
 
 	/*
 	 13. Given three int values, a b c, return the largest.
@@ -160,7 +218,11 @@ public class Exercises {
 		
 		int largest = 0;
 		
-		
+		if (a > b)
+		largest = a;
+		else largest = c;
+		if (b > largest)
+		largest = b;
 		
 		
 		return largest;
@@ -174,6 +236,10 @@ public class Exercises {
 	 in3050(40, 50) → true
 	 */
 	public boolean in3050(int a, int b) {
+		if (((a >= 30 && a <= 40) && (b >= 30 && b <= 40 )) || ((a >= 40 && a <= 50) && (b >= 40 && b <= 50 ))){
+			return true;
+		}
+		
 		return false;
 	}
 
@@ -185,6 +251,8 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
+		
+		
 		return 0;
 	}
 
@@ -198,6 +266,12 @@ public class Exercises {
 	 cigarParty(70, true) → true
 	 */
 	public boolean cigarParty(int cigars, boolean isWeekend) {
+		if (cigars >= 40 && isWeekend ==true) {
+			return true;
+		}
+		if (cigars >=40 && cigars <= 60 && isWeekend == false) {
+			return true;
+		}
 		return false;
 	}
 
@@ -213,7 +287,13 @@ public class Exercises {
 	 dateFashion(5, 5) → 1
 	 */
 	public int dateFashion(int you, int date) {
-		return 0;
+		if ((you >= 8 && date > 2) || (date >=8 && you > 2)) {
+			return 2;
+		}
+		else if (you <=2 || date <=2) {
+			return 0;
+		}
+		return 1;
 	}
 
 	/*
@@ -225,6 +305,12 @@ public class Exercises {
 	 squirrelPlay(95, true) → true
 	 */
 	public boolean squirrelPlay(int temp, boolean isSummer) {
+		if (temp >= 60 && temp <= 90) {
+			return true;
+		}
+		else if (temp >= 60 && temp <= 100 && isSummer == true) {
+			return true;
+		}
 		return false;
 	}
 
