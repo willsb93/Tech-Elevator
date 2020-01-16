@@ -28,7 +28,7 @@ public class Exercises {
 			return true;
 		}
 		return false;
-	}
+		}
 	/*
 	 3. Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
 	 makePi() → [3, 1, 4]
@@ -177,17 +177,13 @@ public class Exercises {
 	 has22([2, 1, 2]) → false
 	 */
 	public boolean has22(int[] nums) {
-		for (int i = 0; i < nums.length; i++) {
-			if (((nums[i] == 2) && (nums[i++] ) {
+		for (int i = 0; i < nums.length - 1; i++) {
+			if (((nums[i] == 2) && (nums[i++] == 2 || nums[i--] == 2 ))) {
 				return true;
-				
 			}
-			
-			
-		}
+			}
 		return false;
 	}
-	
 	/*
 	 14. Given an array of ints, return true if the array contains no 1's and no 3's.
 	 lucky13([0, 2, 4]) → true
