@@ -564,6 +564,16 @@ public class Exercises {
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
+		if (bOk == true) {
+			if (c > b) {
+				return true;
+			}
+		if(!bOk) {
+			if ( b > a && c > b) {
+				return true;
+			}
+		}
+		}
 		return false;}
 		
 		
