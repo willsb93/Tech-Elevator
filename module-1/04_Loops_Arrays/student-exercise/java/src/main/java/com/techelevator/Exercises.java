@@ -10,6 +10,11 @@ public class Exercises {
 	 firstLast6([13, 6, 1, 2, 3]) → false
 	 */
 	public boolean firstLast6(int[] nums) {
+		
+			if (nums[0] == 6 || nums[nums.lentgh - 1] == 6) {
+				return true;
+			}
+		}
 		return false;
 	}
 
@@ -29,7 +34,9 @@ public class Exercises {
 	 makePi() → [3, 1, 4]
 	 */
 	public int[] makePi() {
-		return new int[] {};
+		int [] pi = new int[] {3,1,4};
+		
+		return pi {};
 	}
 
 	/*
@@ -50,9 +57,16 @@ public class Exercises {
 	 sum3([7, 0, 0]) → 7
 	 */
 	public int sum3(int[] nums) {
-		return 0;
+		int sum = 0;
+		sum = nums[0] + nums[1] + nums[2];
+		return sum;
 	}
-
+	
+	int x = 0;
+	for (int i = 0; i < nums.length; i++) {
+		sum += nums[1];
+	}
+	
 	/*
 	 6. Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} 
 	 yields {2, 3, 1}.
@@ -105,7 +119,11 @@ public class Exercises {
 	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 	 */
 	public int[] middleWay(int[] a, int[] b) {
-		return new int[] {};
+		int [] results = new int [2];
+		results[0] = a[1];
+		results[1] = b[1];
+		
+		return results {};
 	}
 
 	/*
