@@ -507,14 +507,16 @@ public class Exercises {
 	 answerCell(true, false, false) → false
 	 */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+	
 		if (isAsleep) {
 		return false;
 	}
-		if(isMom == true) {
-			return true;
-		}
+		if (isMorning == true && isMom == true) {
+		return true;
+	}
 		return false;
 	}
+	
 
 	/*
 	 30. We are having a party with amounts of tea and candy. Return the int outcome of the party encoded as
@@ -562,9 +564,10 @@ public class Exercises {
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
+		return false;}
 		
-		return false;
-	}
+		
+
 
 	/*
 	 33. Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11,
@@ -575,8 +578,20 @@ public class Exercises {
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-		return false;
-	}
+		if (equalOk == true) {
+			if (a <= b && b <=c) {
+				return true;
+				}
+			
+				}
+		if (!equalOk) {
+			if ( a < b && b < c) {
+				return true;
+			}
+			
+		}
+		return false; }
+	
 	
 	/*
 	 34. Given 3 int values, a b c, return their sum. However, if one of the values is the same as another
@@ -585,11 +600,26 @@ public class Exercises {
 	 loneSum(3, 2, 3) → 2
 	 loneSum(3, 3, 3) → 0
 	 */
+	
 	public int loneSum(int a, int b, int c) {
-		return 0;
+		if ((a == b) && (b == c) && (a == c)){
+			return 0;
+		}
+		else {
+			if (a == b) {
+				return c;
+			}
+			if (b == c) {
+				return a;
+			}
+			if (c == a) {
+				return b;
+			}
+			return a + b + c;
+		}
 	}
-
-	/*
+	
+/*
 	 35. Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not
 	 count towards the sum and values to its immediate right do not count. So for example, if b is 13, then both
 	 b and c do not count.
