@@ -251,10 +251,17 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
-		
-		
-		return 0;
+		int x = 0;
+		if (a >=10 && a<=20) {
+			x = Math.max(x,a);
+		}
+		if (b>=10 && b <=20) {
+			x = Math.max(x, b);
+		}
+		return x;
 	}
+		
+	
 
 	/*
 	 16. When squirrels get together for a party, they like to have cigars. A squirrel party is successful
@@ -266,12 +273,12 @@ public class Exercises {
 	 cigarParty(70, true) → true
 	 */
 	public boolean cigarParty(int cigars, boolean isWeekend) {
-		if (cigars >= 40 && isWeekend ==true) {
+		if (cigars >= 40 && isWeekend ==true) 
 			return true;
-		}
-		if (cigars >=40 && cigars <= 60 && isWeekend == false) {
+		
+		if (cigars >=40 && cigars <= 60 && isWeekend == false) 
 			return true;
-		}
+		
 		return false;
 	}
 
@@ -324,8 +331,23 @@ public class Exercises {
 	 caughtSpeeding(65, true) → 0
 	 */
 	public int caughtSpeeding(int speed, boolean isBirthday) {
-		return 0;
-	}
+		
+		if (isBirthday == false) {
+		if (speed <= 60) 
+			return 0;
+		else if (speed >60 && speed <=80) 
+			return 1;
+			return 2;
+		}
+		else if(speed <= 65)
+			return 0;
+		else if(speed > 65 && speed <= 85)
+			return 1;
+		else return 2;
+			
+		}
+	
+	
 
 	/*
 	 20. Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden,
@@ -335,7 +357,12 @@ public class Exercises {
 	 sortaSum(10, 11) → 21
 	 */
 	public int sortaSum(int a, int b) {
-		return 0;
+		int x = a + b;
+		if (x >=10 && x<=19) {
+		return 20;
+	}
+		return x;
+		
 	}
 
 	/*
@@ -348,7 +375,22 @@ public class Exercises {
 	 alarmClock(0, false) → "10:00"
 	 */
 	public String alarmClock(int day, boolean vacation) {
-		return "";
+//		String seven = "7:00";
+//		String ten = "10:00";
+//		String off = "off";
+		
+		if (vacation == false) {
+			if(day == 0 || day == 6) {
+				return "10:00";
+			}
+			return "7:00";
+		}
+		else if (day == 0 || day == 6) {
+			return "off";
+		}
+		
+		
+		return "10:00";
 	}
 
 	/*
@@ -359,6 +401,14 @@ public class Exercises {
 	 in1To10(11, true) → true
 	 */
 	public boolean in1To10(int n, boolean outsideMode) {
+		if (outsideMode == true) {
+			if (n <= 1 || n>= 10) {
+				return true;
+			}
+		}
+		else if (n >= 1 && n<= 10) {
+			return true;
+		}
 		return false;
 	}
 
@@ -371,6 +421,9 @@ public class Exercises {
 	 specialEleven(24) → false
 	 */
 	public boolean specialEleven(int n) {
+		if (n % 11 == 0 || n % 11 == 1) {
+			return true;
+		}
 		return false;
 	}
 
@@ -381,7 +434,10 @@ public class Exercises {
 	 more20(21) → true
 	 more20(22) → true
 	 */
-	public boolean more20(int n) {
+	public boolean more20(int n) { 
+		if( n % 20 == 1 || n % 20 == 2) {
+			return true;
+		}
 		return false;
 	}
 
@@ -393,6 +449,9 @@ public class Exercises {
 	 old35(15) → false
 	 */
 	public boolean old35(int n) {
+		if ( n % 3 == 0  ^ n % 5 ==0 ) {
+			return true;
+		}
 		return false;
 	}
 
@@ -405,6 +464,9 @@ public class Exercises {
 	 less20(20) → false
 	 */
 	public boolean less20(int n) {
+		if((n + 1) % 20 == 0 || (n+2) % 20 == 0) {
+			return true;
+		}
 		return false;
 	}
 
@@ -416,6 +478,9 @@ public class Exercises {
 	 nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
+		if (num % 10 <= 2 || num % 10 >=8) {
+			return true;
+		}
 		return false;
 	}
 
@@ -427,7 +492,11 @@ public class Exercises {
 	 teenSum(13, 2) → 19
 	 */
 	public int teenSum(int a, int b) {
-		return 0;
+		int x = a + b;
+		if (a >=13 && a <=19 || b >=13 && b<=19) {
+			return 19;
+		}
+		return x;
 	}
 
 	/*
@@ -438,6 +507,12 @@ public class Exercises {
 	 answerCell(true, false, false) → false
 	 */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+		if (isAsleep) {
+		return false;
+	}
+		if(isMom == true) {
+			return true;
+		}
 		return false;
 	}
 
@@ -451,8 +526,20 @@ public class Exercises {
 	 teaParty(20, 6) → 2
 	 */
 	public int teaParty(int tea, int candy) {
-		return 0;
+		
+		
+		if(tea < 5 || candy < 5) {
+			return 0;
+		}
+		
+		if (tea >= candy * 2 || candy >= tea * 2) {
+			return 2;
+		}
+		else {
+			return 1;
+		}
 	}
+	
 
 	/*
 	 31. Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
@@ -461,6 +548,9 @@ public class Exercises {
 	 twoAsOne(3, 2, 2) → false
 	 */
 	public boolean twoAsOne(int a, int b, int c) {
+		if (a + b == c || a + c == b || b + c == a) {
+			return true;
+		}
 		return false;
 	}
 
@@ -472,6 +562,7 @@ public class Exercises {
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
+		
 		return false;
 	}
 
@@ -486,7 +577,7 @@ public class Exercises {
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
 		return false;
 	}
-
+	
 	/*
 	 34. Given 3 int values, a b c, return their sum. However, if one of the values is the same as another
 	 of the values, it does not count towards the sum.
@@ -509,7 +600,15 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
-		return 0;
+		if (a == 13 ) {
+			a = 0 ; b = 0 ; }
+		if (b == 13) {
+			b = 0; c = 0 ;
+		}
+		if (c == 13) {
+			c = 0;
+		}
+		return a + b + c;
 	}
 
 }
