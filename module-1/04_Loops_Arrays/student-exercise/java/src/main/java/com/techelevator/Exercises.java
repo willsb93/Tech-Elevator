@@ -10,13 +10,11 @@ public class Exercises {
 	 firstLast6([13, 6, 1, 2, 3]) → false
 	 */
 	public boolean firstLast6(int[] nums) {
-		
-			if (nums[0] == 6 || nums[nums.lentgh - 1] == 6) {
-				return true;
-			}
+		if (nums[0] == 6 || nums[nums.length -1] == 6) {
+			return true;
 		}
 		return false;
-	}
+		}
 
 	/*
 	 2. Given an array of ints, return true if the array is length 1 or more, and the first element and
@@ -26,17 +24,18 @@ public class Exercises {
 	 sameFirstLast([1, 2, 1]) → true
 	 */
 	public boolean sameFirstLast(int[] nums) {
+		if (nums.length > 0 && nums[0] == nums[nums.length - 1]) {
+			return true;
+		}
 		return false;
-	}
-
+		}
 	/*
 	 3. Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
 	 makePi() → [3, 1, 4]
 	 */
 	public int[] makePi() {
-		int [] pi = new int[] {3,1,4};
-		
-		return pi {};
+		int[] pi = new int[] {3,1,4};
+		return pi;
 	}
 
 	/*
@@ -47,8 +46,11 @@ public class Exercises {
 	 commonEnd([1, 2, 3], [1, 3]) → true
 	 */
 	public boolean commonEnd(int[] a, int[] b) {
+		if (a[0] == b[0] || a[a.length - 1] == b[b.length - 1]) {
+			return true;
+		}
 		return false;
-	}
+		}
 
 	/*
 	 5. Given an array of ints length 3, return the sum of all the elements.
@@ -61,12 +63,7 @@ public class Exercises {
 		sum = nums[0] + nums[1] + nums[2];
 		return sum;
 	}
-	
-	int x = 0;
-	for (int i = 0; i < nums.length; i++) {
-		sum += nums[1];
-	}
-	
+
 	/*
 	 6. Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} 
 	 yields {2, 3, 1}.
@@ -75,8 +72,9 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
-		return new int[] {};
+		return new int[] { nums[1], nums[2], nums[0]}; 
 	}
+	
 
 	/*
 	 7. Given an array of ints length 3, return a new array with the elements in reverse order, so 
@@ -86,7 +84,8 @@ public class Exercises {
 	 reverse3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] reverse3(int[] nums) {
-		return new int[] {};
+		
+		return new int[] {nums[2], nums [1], nums[0]};
 	}
 
 	/*
@@ -97,8 +96,18 @@ public class Exercises {
 	 maxEnd3([2, 11, 3]) → [3, 3, 3]
 	 */
 	public int[] maxEnd3(int[] nums) {
-		return new int[] {};
-	}
+		if (nums[2] > nums[0]) {
+			return new int[] {nums[2], nums[2], nums[2]};
+		}	
+		
+		else if(nums[0] > nums[2]) {
+				return new int[] {nums[0], nums[0], nums [0]};
+		}
+		
+				return new int[0];
+		}
+				
+
 
 	/*
 	 9. Given an array of ints, return the sum of the first 2 elements in the array. If the array length
@@ -108,8 +117,13 @@ public class Exercises {
 	 sum2([1, 1, 1, 1]) → 2
 	 */
 	public int sum2(int[] nums) {
-		return 0;
-	}
+		if (nums.length == 0) {
+			return 0;
+		}
+		return nums[0] + nums[1]; 
+		
+		}
+	
 
 	/*
 	 10. Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle 
@@ -119,11 +133,10 @@ public class Exercises {
 	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 	 */
 	public int[] middleWay(int[] a, int[] b) {
-		int [] results = new int [2];
+		int [] results = new int[2];
 		results[0] = a[1];
-		results[1] = b[1];
-		
-		return results {};
+		results [1] = b[1];
+		return results;
 	}
 
 	/*
@@ -134,7 +147,14 @@ public class Exercises {
 	 countEvens([1, 3, 5]) → 0
 	 */
 	public int countEvens(int[] nums) {
-		return 0;
+		int evenNumbers = 0;
+		for (int i = 0; i< nums.length; i++) {
+			if (nums[i] % 2 == 0) {
+				evenNumbers++;
+			}
+			
+		}
+		return evenNumbers;
 	}
 
 	/*
@@ -146,8 +166,17 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13]) → 6
 	 */
 	public int sum13(int[] nums) {
-		return 0;
-	}
+		  int sum = 0;
+		  
+		  for (int i = 0; i < nums.length; i++) {
+		    if(nums[i] != 13) {
+		      sum += nums[i];
+		      if(i>0 && nums[i-1] == 13)
+		        sum -= nums[i];
+		    }
+		  }
+		  return sum;
+		}
 
 	/*
 	 13. Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
@@ -156,9 +185,13 @@ public class Exercises {
 	 has22([2, 1, 2]) → false
 	 */
 	public boolean has22(int[] nums) {
+		for (int i = 0; i < nums.length - 1; i++) {
+			if (nums[i] == 2 && nums[i+1] == 2) {
+				return true;
+			}
+			}
 		return false;
 	}
-	
 	/*
 	 14. Given an array of ints, return true if the array contains no 1's and no 3's.
 	 lucky13([0, 2, 4]) → true
@@ -166,7 +199,12 @@ public class Exercises {
 	 lucky13([1, 2, 4]) → false
 	 */
 	public boolean lucky13(int[] nums) {
-		return false;
+		for(int i = 0; i < nums.length; i++) {
+			if (nums[i] == 1 || nums[i] == 3) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	/*
@@ -176,7 +214,16 @@ public class Exercises {
 	 sum28([1, 2, 3, 4]) → false
 	 */
 	public boolean sum28(int[] nums) {
+		int x = 0;
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 2) 
+			x +=2;
+		}
+		if (x == 8) {
+			return true;
+		}
 		return false;
-	}
+		}
+		}
+	
 
-}
