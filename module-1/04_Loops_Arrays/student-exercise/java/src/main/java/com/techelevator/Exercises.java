@@ -166,6 +166,7 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13]) → 6
 	 */
 	public int sum13(int[] nums) {
+
 		  int sum = 0;
 		  
 		  for (int i = 0; i < nums.length; i++) {
@@ -176,7 +177,8 @@ public class Exercises {
 		    }
 		  }
 		  return sum;
-		}
+	}
+
 
 	/*
 	 13. Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
@@ -186,12 +188,19 @@ public class Exercises {
 	 */
 	public boolean has22(int[] nums) {
 		for (int i = 0; i < nums.length - 1; i++) {
+
 			if (nums[i] == 2 && nums[i+1] == 2) {
+			if (((nums[i] == 2) && (nums[i++] == 2 || nums[i--] == 2 ))) {
+
 				return true;
+			}
+			{
+		return false;
+			}
 			}
 			}
 		return false;
-	}
+			}
 	/*
 	 14. Given an array of ints, return true if the array contains no 1's and no 3's.
 	 lucky13([0, 2, 4]) → true
@@ -225,5 +234,3 @@ public class Exercises {
 		return false;
 		}
 		}
-	
-
