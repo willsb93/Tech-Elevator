@@ -166,8 +166,17 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13]) → 6
 	 */
 	public int sum13(int[] nums) {
-		
-		return 0;
+
+		  int sum = 0;
+		  
+		  for (int i = 0; i < nums.length; i++) {
+		    if(nums[i] != 13) {
+		      sum += nums[i];
+		      if(i>0 && nums[i-1] == 13)
+		        sum -= nums[i];
+		    }
+		  }
+		  return sum;
 	}
 
 	/*
@@ -178,12 +187,18 @@ public class Exercises {
 	 */
 	public boolean has22(int[] nums) {
 		for (int i = 0; i < nums.length - 1; i++) {
+
+			if (nums[i] == 2 && nums[i+1] == 2) {
 			if (((nums[i] == 2) && (nums[i++] == 2 || nums[i--] == 2 ))) {
+
 				return true;
 			}
-			}
+			{
 		return false;
-	}
+			}
+			}
+			}
+			}
 	/*
 	 14. Given an array of ints, return true if the array contains no 1's and no 3's.
 	 lucky13([0, 2, 4]) → true
