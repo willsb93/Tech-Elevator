@@ -406,8 +406,14 @@ public class Exercises {
 	 * stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
-
-		return null;
+		String result = "";
+		for (int i = 0; i < str.length(); i++) {
+			int x = str.charAt(i);
+			if ( i + 2 < str.length() && str.charAt(i) == 'y' && str.charAt(i+2) == 'k') {
+				result = result + x;
+			}
+		}
+		return result;
 	}
 
 }
