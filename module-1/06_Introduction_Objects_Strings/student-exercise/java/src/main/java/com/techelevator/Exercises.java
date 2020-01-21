@@ -371,7 +371,14 @@ public class Exercises {
 	 * "xHix" stringX("abxxxcd") → "abcd" stringX("xabxxxcdx") → "xabcdx"
 	 */
 	public String stringX(String str) {
-		return null;
+		String result = "";
+		for (int i = 0; i < str.length(); i++) {
+			char x = str.charAt(i);
+			if (!(i > 0 && i < str.length() - 1 && x == 'x')) {
+				result = result + x;
+			}
+		}
+		return result;
 	}
 
 	/*
@@ -399,6 +406,7 @@ public class Exercises {
 	 * stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
+
 		return null;
 	}
 
