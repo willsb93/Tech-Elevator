@@ -150,7 +150,6 @@ public class Exercises {
 			if (integerList.get(i) == intToFind)
 				count++;
 		}
-
 		if (count >= 2) {
 			return true;
 		}
@@ -211,7 +210,6 @@ public class Exercises {
 			} else {
 				finalList.add(listOne.remove(0));
 				finalList.add(listTwo.remove(0));
-
 			}
 		}
 
