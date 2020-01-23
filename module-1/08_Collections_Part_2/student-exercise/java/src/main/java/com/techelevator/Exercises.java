@@ -119,13 +119,14 @@ public class Exercises {
 			return scammedPeter;
 		} else if (peter > 0 && paul < 1000 && (peter % 2 != 0)) {
 			scammedPeter.put("Peter", halfOfPeter);
-			scammedPeter.put("Paul", (moneyForPaul + (int)(test + 0.1)));
-		    return scammedPeter; 
-		    }
+			scammedPeter.put("Paul", (paul + (int) (test - 0.1)));
+			return scammedPeter;
+		}
 
-		return peterPaul; }
-	 // if odd - 0,1 to round
-		// if even no need;
+		return peterPaul;
+	}
+	// if odd - 0,1 to round
+	// if even no need;
 
 	/*
 	 * Modify and return the given map as follows: if "Peter" has $50 or more, AND
