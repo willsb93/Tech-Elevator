@@ -108,17 +108,24 @@ public class Exercises {
 		Map<String, Integer> scammedPeter = new HashMap<String, Integer>();
 		int paul = peterPaul.get("Paul");
 		int peter = peterPaul.get("Peter");
-		int halfOfPeter = peter / 2;
+		double test = (double) peterPaul.get("Peter") - (double) peter / 2;
+
+		int halfOfPeter = peterPaul.get("Peter") - (int) (test);
 		int moneyForPaul = paul + halfOfPeter;
 
-		if (peter > 0 && paul < 1000) {
+		if (peter > 0 && paul < 1000 && (peter % 2 == 0)) {
 			scammedPeter.put("Peter", halfOfPeter);
 			scammedPeter.put("Paul", moneyForPaul);
 			return scammedPeter;
-		}
+		} else if (peter > 0 && paul < 1000 && (peter % 2 != 0)) {
+			scammedPeter.put("Peter", halfOfPeter);
+			scammedPeter.put("Paul", (moneyForPaul + (int)(test + 0.1)));
+		    return scammedPeter; 
+		    }
 
-		return peterPaul;
-	}
+		return peterPaul; }
+	 // if odd - 0,1 to round
+		// if even no need;
 
 	/*
 	 * Modify and return the given map as follows: if "Peter" has $50 or more, AND
@@ -311,23 +318,27 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
-		return null;
+
+		Map<String, Integer> last2 = new HashMap<String, Integer>();
+		int count = 1;
+		int i = 0;
+
+		for (i = 0; i < words.length; i++) {
+
+			if (words[i].substring(0, 2).equals(words[i].substring(2, words.length - 1))) {
+				count++;
+				last2.put(words[i], count);
+			}
+
+			else {
+				last2.put(words[i], count);
+
+			}
+
+		}
+		return last2;
+
 	}
-//		Map <String, Integer> last2 = new HashMap <String, integer> ();
-//		String [] end = words[]
-////		for (String s : words)
-////			if (!last2.containsKey(s)) {
-////				last2.put(s, 1);
-////			if ()	
-//				
-//			                
-//			    for(int i = 0; i < words.length - 2; i++) {
-//			        if(words[i].inn   equals(end))
-//			            count++;
-//			    }
-//			}
-//		return null;
-//	}
 
 	/*
 	 * Given a list of Strings, return a list that contains the distinct values. In
