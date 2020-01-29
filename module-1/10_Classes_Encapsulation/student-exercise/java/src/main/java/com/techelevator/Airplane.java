@@ -12,8 +12,8 @@ public class Airplane {
 
 	// Constructor
 
-	public Airplane(String planenumber, int totalFirstClassSeats, int totalCoachSeats) {
-		this.planeNumber = planenumber;
+	public Airplane(String planeNumber, int totalFirstClassSeats, int totalCoachSeats) {
+		this.planeNumber = planeNumber;
 		this.totalFirstClassSeats = totalFirstClassSeats;
 		this.totalCoachSeats = totalCoachSeats;
 	}
