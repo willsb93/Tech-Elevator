@@ -43,8 +43,8 @@ public class TollCalculator {
 
 		}
 		System.out.println("**************************************************");
-		System.out.println("Total Miles Traveled: " + totalMiles);
-		System.out.println("Total Tollbooth Revenue: $" + totalRevenue);
+		System.out.println("Total Miles Traveled: " + (double) Math.round(totalMiles * 100) / 100);
+		System.out.println("Total Tollbooth Revenue: $" + (double) Math.round(totalRevenue * 100) / 100);
 	}
 
 }

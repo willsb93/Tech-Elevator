@@ -6,13 +6,13 @@ public class SecondClass implements IDeliveryDriver {
 
 	public double calculateRate(int distance, double weight) {
 		double perMileRate = 0.0;
-		if (weight <= 0.125) {
+		if (weight <= 2) {
 			perMileRate = 0.0035;
-		} else if (weight > 0.125 && weight <= 0.5) {
+		} else if (weight > 2 && weight <= 8) {
 			perMileRate = 0.0040;
-		} else if (weight > 0.5 && weight <= 0.93) {
+		} else if (weight > 8 && weight <= 15) {
 			perMileRate = 0.0047;
-		} else if (weight > 0.93 && weight < 16) {
+		} else if (weight > 15 && weight < 16) {
 			perMileRate = 0.0195;
 		} else if (weight > 16 && weight < 128) {
 			perMileRate = 0.0450;
@@ -21,7 +21,7 @@ public class SecondClass implements IDeliveryDriver {
 		}
 
 		double rate = perMileRate * distance;
-		return rate;
+		return (double) Math.round(rate * 100) / 100;
 	}
 
 	@Override

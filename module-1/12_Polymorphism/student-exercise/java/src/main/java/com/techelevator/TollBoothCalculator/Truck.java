@@ -1,7 +1,5 @@
 package com.techelevator.TollBoothCalculator;
 
-import java.text.DecimalFormat;
-
 public class Truck implements IVehicle {
 
 	private int numberOfAxles;
@@ -24,7 +22,7 @@ public class Truck implements IVehicle {
 		} else if (this.numberOfAxles >= 8) {
 			toll = distance * 0.048;
 		}
-		return toll;
+		return (double) Math.round(toll * 100) / 100;
 	}
 
 	@Override

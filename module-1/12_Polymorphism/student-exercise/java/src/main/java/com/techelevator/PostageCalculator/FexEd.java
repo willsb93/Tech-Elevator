@@ -1,15 +1,15 @@
 package com.techelevator.PostageCalculator;
 
-public class FexEd implements IDeliveryDriver{
+public class FexEd implements IDeliveryDriver {
 
 	@Override
 	public double calculateRate(int distance, double weight) {
 		double rate = 20.0;
 		if (distance > 500) {
-			rate = rate + 5;
+			rate = (double) Math.round(rate * 100) / 100 + 5;
 		}
 		if (weight > 48) {
-			rate = rate + 3;
+			rate = (double) Math.round(rate * 100) / 100 + 3;
 		}
 		return rate;
 	}

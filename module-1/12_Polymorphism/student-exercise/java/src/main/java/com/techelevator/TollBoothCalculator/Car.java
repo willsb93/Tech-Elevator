@@ -20,7 +20,7 @@ public class Car implements IVehicle {
 		if (hasTrailer == true) {
 			toll = toll + 1.00;
 		}
-		return toll;
+		return (double) Math.round(toll * 100) / 100;
 	}
 
 	@Override
