@@ -19,10 +19,6 @@ public class KataFizzBuzz {
 			return "Buzz";
 		}
 
-		else if (num >= 1 && num <= 100) {
-			return Integer.toString(num);
-		}
-
-		return "test";
+		return Integer.toString(num);
 	}
 }
