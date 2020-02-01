@@ -48,4 +48,12 @@ public class KataFizzBuzzTest {
 		assertEquals("", acess.fizzBuzz(0).toString());
 	}
 
+	@Test
+
+	public void testDivisibleBy3OrContains3ReturnFizz() {
+		assertEquals("Fizz", acess.fizzBuzz(31).toString());
+		assertEquals("Fizz", acess.fizzBuzz(9).toString());
+		assertEquals("Fizz", acess.fizzBuzz(34).toString());
+		assertEquals("Fizz", acess.fizzBuzz(13).toString());
+	}
 }
