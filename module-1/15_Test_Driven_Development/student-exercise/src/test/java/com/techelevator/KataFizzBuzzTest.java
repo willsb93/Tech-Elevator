@@ -66,13 +66,11 @@ public class KataFizzBuzzTest {
 
 	@Test
 	public void testDivisibleBy5And3OrContains5And3ReturnFizzBuzz() {
-		assertEquals("FizzBuzz", acess.fizzBuzz(5).toString());
+		assertEquals("FizzBuzz", acess.fizzBuzz(30).toString());
 		assertEquals("FizzBuzz", acess.fizzBuzz(53).toString());
-		assertEquals("FizzBuzz", acess.fizzBuzz(56).toString());
-		assertEquals("FizzBuzz", acess.fizzBuzz(65).toString());
-		assertEquals("FizzBuzz", acess.fizzBuzz(63).toString());
-		assertEquals("FizzBuzz", acess.fizzBuzz(75).toString());
-		assertEquals("FizzBuzz", acess.fizzBuzz(83).toString());
+		assertEquals("FizzBuzz", acess.fizzBuzz(35).toString());
 		assertEquals("FizzBuzz", acess.fizzBuzz(15).toString());
+		assertEquals("FizzBuzz", acess.fizzBuzz(45).toString());
+
 	}
 }

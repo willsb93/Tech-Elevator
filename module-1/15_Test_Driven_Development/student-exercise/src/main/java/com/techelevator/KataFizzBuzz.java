@@ -8,7 +8,7 @@ public class KataFizzBuzz {
 			return "";
 		}
 
-		if (num % 3 == 0 && num % 5 == 0) {
+		if (num % 3 == 0 && num % 5 == 0 || String.valueOf(num).contains("3") && String.valueOf(num).contains("5")) {
 			return "FizzBuzz";
 
 		} else if (num % 3 == 0 || String.valueOf(num).contains("3")) {
