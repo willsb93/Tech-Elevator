@@ -10,7 +10,10 @@ public class KataFizzBuzzTest {
 	@Test
 	
 	public void testDivisibleby3ReturnFizz() {
-		assertEquals("Fizz", acess);
+		assertEquals("Fizz", acess.fizzBuzz(3));
+		assertEquals("Fizz", acess.fizzBuzz(9));
+		assertEquals("Fizz", acess.fizzBuzz(33));
+		assertEquals("Fizz", acess.fizzBuzz(12));
 	}
 	
 	
