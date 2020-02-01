@@ -37,7 +37,7 @@ public class KataFizzBuzzTest {
 		assertEquals("11", acess.fizzBuzz(11).toString());
 		assertEquals("7", acess.fizzBuzz(7).toString());
 		assertEquals("14", acess.fizzBuzz(14).toString());
-		assertEquals("72", acess.fizzBuzz(72).toString());
+		assertEquals("74", acess.fizzBuzz(74).toString());
 	}
 
 }
