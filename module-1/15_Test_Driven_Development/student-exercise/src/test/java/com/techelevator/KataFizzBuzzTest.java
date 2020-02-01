@@ -55,12 +55,24 @@ public class KataFizzBuzzTest {
 		assertEquals("Fizz", acess.fizzBuzz(34).toString());
 		assertEquals("Fizz", acess.fizzBuzz(13).toString());
 	}
-	
+
 	@Test
 	public void testDivisibleBy5OrContains5ReturnBuzz() {
 		assertEquals("Buzz", acess.fizzBuzz(5).toString());
 		assertEquals("Buzz", acess.fizzBuzz(52).toString());
 		assertEquals("Buzz", acess.fizzBuzz(56).toString());
 		assertEquals("Buzz", acess.fizzBuzz(65).toString());
+	}
+
+	@Test
+	public void testDivisibleBy5And3OrContains5And3ReturnFizzBuzz() {
+		assertEquals("FizzBuzz", acess.fizzBuzz(5).toString());
+		assertEquals("FizzBuzz", acess.fizzBuzz(53).toString());
+		assertEquals("FizzBuzz", acess.fizzBuzz(56).toString());
+		assertEquals("FizzBuzz", acess.fizzBuzz(65).toString());
+		assertEquals("FizzBuzz", acess.fizzBuzz(63).toString());
+		assertEquals("FizzBuzz", acess.fizzBuzz(75).toString());
+		assertEquals("FizzBuzz", acess.fizzBuzz(83).toString());
+		assertEquals("FizzBuzz", acess.fizzBuzz(15).toString());
 	}
 }
