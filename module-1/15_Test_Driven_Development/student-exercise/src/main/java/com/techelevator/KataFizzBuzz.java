@@ -15,6 +15,6 @@ public class KataFizzBuzz {
 			return "Buzz";
 		}
 
-		return "test";
+		return "test"; 
 	}
 }
