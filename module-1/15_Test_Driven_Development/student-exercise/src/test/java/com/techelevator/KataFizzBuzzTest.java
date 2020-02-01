@@ -59,8 +59,8 @@ public class KataFizzBuzzTest {
 	@Test
 	public void testDivisibleBy5OrContains5ReturnBuzz() {
 		assertEquals("Buzz", acess.fizzBuzz(5).toString());
-		assertEquals("Buzz", acess.fizzBuzz(51).toString());
-		assertEquals("Buzz", acess.fizzBuzz(54).toString());
-		assertEquals("Buzz", acess.fizzBuzz(150).toString());
+		assertEquals("Buzz", acess.fizzBuzz(52).toString());
+		assertEquals("Buzz", acess.fizzBuzz(56).toString());
+		assertEquals("Buzz", acess.fizzBuzz(65).toString());
 	}
 }
