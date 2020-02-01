@@ -11,7 +11,7 @@ public class KataFizzBuzz {
 		if (num % 3 == 0 && num % 5 == 0) {
 			return "FizzBuzz";
 
-		} else if (num % 3 == 0) {
+		} else if (num % 3 == 0 || String.valueOf(num).contains("3")) {
 			return "Fizz";
 		}
 
