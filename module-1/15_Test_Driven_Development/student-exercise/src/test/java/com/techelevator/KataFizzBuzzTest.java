@@ -4,18 +4,18 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class KataFizzBuzzTest {
-	
+
 	KataFizzBuzz acess = new KataFizzBuzz();
-	
+
 	@Test
-	
+
 	public void testDivisibleBy3ReturnFizz() {
 		assertEquals("Fizz", acess.fizzBuzz(3));
 		assertEquals("Fizz", acess.fizzBuzz(9));
 		assertEquals("Fizz", acess.fizzBuzz(33));
 		assertEquals("Fizz", acess.fizzBuzz(12));
 	}
-	
+
 	@Test
 	public void testDivisibleBy5ReturnBuzz() {
 		assertEquals("Buzz", acess.fizzBuzz(5));
@@ -23,7 +23,7 @@ public class KataFizzBuzzTest {
 		assertEquals("Buzz", acess.fizzBuzz(20));
 		assertEquals("Buzz", acess.fizzBuzz(25));
 	}
-	
+
 	@Test
 	public void testDivisibleBy5And3ReturnFizzBuzz() {
 		assertEquals("FizzBuzz", acess.fizzBuzz(15));
@@ -31,6 +31,13 @@ public class KataFizzBuzzTest {
 		assertEquals("FizzBuzz", acess.fizzBuzz(45));
 		assertEquals("FizzBuzz", acess.fizzBuzz(90));
 	}
-	
+
+	@Test
+	public void testNotDivisibleBetween1And100() {
+		assertEquals("11", acess.fizzBuzz(11).toString());
+		assertEquals("7", acess.fizzBuzz(7).toString());
+		assertEquals("14", acess.fizzBuzz(14).toString());
+		assertEquals("72", acess.fizzBuzz(72).toString());
+	}
 
 }
