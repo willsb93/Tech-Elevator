@@ -39,7 +39,7 @@ public class KataFizzBuzzTest {
 		assertEquals("14", acess.fizzBuzz(14).toString());
 		assertEquals("74", acess.fizzBuzz(74).toString());
 	}
-	
+
 	@Test
 	public void testNotBetween1And100() {
 		assertEquals("", acess.fizzBuzz(-1).toString());

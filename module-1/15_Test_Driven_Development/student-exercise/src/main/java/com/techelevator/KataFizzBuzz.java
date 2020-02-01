@@ -4,19 +4,25 @@ public class KataFizzBuzz {
 
 	public String fizzBuzz(int num) {
 
+		if (num <= 0 || num >= 100) {
+			return "";
+		}
+
 		if (num % 3 == 0 && num % 5 == 0) {
 			return "FizzBuzz";
 
-		}
-		if (num % 3 == 0) {
+		} else if (num % 3 == 0) {
 			return "Fizz";
 		}
-		if (num % 5 == 0) {
+
+		else if (num % 5 == 0) {
 			return "Buzz";
 		}
-		if (num >= 1 && num <= 100) {
+
+		else if (num >= 1 && num <= 100) {
 			return Integer.toString(num);
 		}
+
 		return "test";
 	}
 }
