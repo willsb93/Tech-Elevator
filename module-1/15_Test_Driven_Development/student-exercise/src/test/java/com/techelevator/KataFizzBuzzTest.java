@@ -24,6 +24,13 @@ public class KataFizzBuzzTest {
 		assertEquals("Buzz", acess.fizzBuzz(25));
 	}
 	
+	@Test
+	public void testDivisibleBy5And3ReturnFizzBuzz() {
+		assertEquals("FizzBuzz", acess.fizzBuzz(15));
+		assertEquals("FizzBuzz", acess.fizzBuzz(30));
+		assertEquals("FizzBuzz", acess.fizzBuzz(45));
+		assertEquals("FizzBuzz", acess.fizzBuzz(90));
+	}
 	
 
 }
