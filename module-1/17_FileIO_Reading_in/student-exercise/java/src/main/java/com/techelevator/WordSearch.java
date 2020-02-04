@@ -52,10 +52,14 @@ public class WordSearch {
 
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
-
+				System.out.println("File not found");
 				e.printStackTrace();
-			}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				System.out.println("Word not found");
+				e.printStackTrace();
 
+			}
 		}
 	}
 }
