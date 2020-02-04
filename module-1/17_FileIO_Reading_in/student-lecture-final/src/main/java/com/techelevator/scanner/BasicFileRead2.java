@@ -19,7 +19,7 @@ public class BasicFileRead2 {
 				System.out.println(s);
 				
 				//now split into fields
-				String[] myFields = s.split(",");
+				String[] myFields = s.split("[,d]");
 				
 				if (myFields.length != 0) {
 					String name = myFields[0];

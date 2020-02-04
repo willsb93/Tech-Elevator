@@ -29,9 +29,13 @@ public class BasicFileRead {
 			String[] mySplitLine1 = firstLine.split(" ");
 			
 			System.out.println("Now let's parse it...");
-			for (int i = 0; i< mySplitLine1.length; i++) {
+			int i = 0;
+			for (i = 0; i< mySplitLine1.length; i++) {
+				//while loop here, while has next line
+				
 				System.out.println(mySplitLine1[i]);
 			}
+			System.out.println(i);
 			
 			
 			String secondLine = fileScanner.nextLine();
