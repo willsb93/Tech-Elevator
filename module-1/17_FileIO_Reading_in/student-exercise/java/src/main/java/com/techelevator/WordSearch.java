@@ -37,7 +37,7 @@ public class WordSearch {
 					}
 				}
 
-				if (yesOrNo.contentEquals("y")) {
+				else if (yesOrNo.contentEquals("y")) {
 					while (input.hasNextLine()) {
 						line++;
 						String lineCheck = input.nextLine();
@@ -60,4 +60,3 @@ public class WordSearch {
 	}
 }
 // work on length 1 cases
-///Users/williamtruccolorabuske/Development/williamtruccolorabuske-java-green-material/module-1/17_FileIO_Reading_in/student-exercise/java/alices_adventures_in_wonderland.txt
