@@ -30,6 +30,8 @@
     top: 0;
     left: 0;
     overflow-x: hidden;
+  
+    
     
     
   }
@@ -44,17 +46,22 @@
     padding-top: 15px;
     position: relative;
     left:-30px;
+    
+  
+    
+
   
     
   }
 
   ul{
     list-style-type: none;
+   
     
   }
  
   main img{
-    height:560px;
+    height:400px;
     padding-left: 200px;
   }
 
@@ -77,41 +84,52 @@
 
 div{
   display: block;
+  
+  
 }
   
 #what-we-do{
   padding-left: 200px;
   padding-top: 25px;
+  
 
 }
 
 #what-we-do h2{
   
   color: #8CC36F;
+ 
+  line-height: 25px;
 }
 
 #what-we-do p {
   width: 400px;
+  border-right: 1px solid rgb(170, 239, 135, 0.8);
+  line-height: 25px;
+  font-size: 15px;
+ 
  
 }
 
 #our-work{
- padding-left: 770px;
+ padding-left: 620px;
  position: relative;
- top: -167px;
+ top: -193px;
  
   
 }
 
 #our-work p {
-  width: 400px;
-  
+  width: 350px;
+  border-right: 1px solid rgb(170, 239, 135, 0.8);
+  line-height: 25px;
+  font-size: 15px;
 }
 
 #contact-us{
-  padding-left : 1350px;
+  padding-left : 1000px;
   position: relative;
-  top: -333px;
+  top: -387px;
 }
 #our-work h2 {
   
@@ -123,29 +141,31 @@ div{
 }
 
 #contact-us p{
-  width: 400px;
+  width: 350px;
+  font-size: 15px;
 }
 
 #social img {
 height: 30px;
-padding-left: 50px;
+padding-left: 30px;
 position: relative;
-left: 850px;
+left: 750px;
+bottom: 150px;
 }
 
 footer p {
   position: relative;
   left:198px;
-  bottom: 410px;
+  bottom: 470px;
 }
 
 h3{
   position: relative;
-  left:190px;
-  bottom: 20px;
+  left:198px;
+  bottom: 250px;
 }
 
 footer div p{
-  Bottom: 30px;
-  left: 190px;
+  Bottom: 200px;
+  left: 198px;
 }
