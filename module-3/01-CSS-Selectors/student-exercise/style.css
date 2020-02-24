@@ -12,6 +12,140 @@
   * {
     box-sizing: border-box;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+  }
+  body{
+    margin : 0 auto;
+    height: 100%;
   }
   
+  aside{
+    color: #00ADEE;
+    width: 200px;
+    position : fixed;
+    font-size: 20px;
+    padding-top: 0px;
+    padding-left: 25px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    
+    
+  }
+
+  aside a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #00ADEE;
+    border-bottom: 1px solid #00ADEE;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    position: relative;
+    left:-30px;
   
+    
+  }
+
+  ul{
+    list-style-type: none;
+    
+  }
+ 
+  main img{
+    height:560px;
+    padding-left: 200px;
+  }
+
+  aside img{
+    position: relative;
+    height :130px;
+    left: 15px;
+    
+  }
+
+  header img{
+    height: 150px;
+    padding-left: 180px;
+    font-size: 3
+  }
+  
+  header p{
+    padding-left: 200px;
+  }
+
+div{
+  display: block;
+}
+  
+#what-we-do{
+  padding-left: 200px;
+  padding-top: 25px;
+
+}
+
+#what-we-do h2{
+  
+  color: #8CC36F;
+}
+
+#what-we-do p {
+  width: 400px;
+ 
+}
+
+#our-work{
+ padding-left: 770px;
+ position: relative;
+ top: -167px;
+ 
+  
+}
+
+#our-work p {
+  width: 400px;
+  
+}
+
+#contact-us{
+  padding-left : 1350px;
+  position: relative;
+  top: -333px;
+}
+#our-work h2 {
+  
+  color: #8CC36F;
+}
+
+#contact-us h2{
+  color: #8CC36F;
+}
+
+#contact-us p{
+  width: 400px;
+}
+
+#social img {
+height: 30px;
+padding-left: 50px;
+position: relative;
+left: 850px;
+}
+
+footer p {
+  position: relative;
+  left:198px;
+  bottom: 410px;
+}
+
+h3{
+  position: relative;
+  left:190px;
+  bottom: 20px;
+}
+
+footer div p{
+  Bottom: 30px;
+  left: 190px;
+}
