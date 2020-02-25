@@ -1,22 +1,17 @@
 :root {
-    --top-row-height: 120px;
-    --gutter: 20px;
-    --blue: #00adee;
-    --light-blue: rgba(0, 173, 238, 0.4);
-    --green: #8cc36f;
-    --light-green: rgba(170, 239, 135, 0.8);  
-    --bg-color: rgba(192, 192, 192, 0.1);
-    --subheading: rgba(0, 0, 0, 0.6);
+  --top-row-height: 120px;
+  --gutter: 20px;
+  --blue: #00adee;
+  --light-blue: rgba(0, 173, 238, 0.4);
+  --green: #8cc36f;
+  --light-green: rgba(170, 239, 135, 0.8);
+  --bg-color: rgba(192, 192, 192, 0.1);
+  --subheading: rgba(0, 0, 0, 0.6);
   }
   
-  * {
-    box-sizing: border-box;
-    font-family: Tahoma, Verdana, Segoe, sans-serif;
-
-  }
-  body{
-    margin : 0;
-    height: 100%;
+  *{
+  box-sizing: border-box;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
   }
   
   aside{
@@ -33,14 +28,8 @@
     border-right : 1px solid #00ADEE;
     background-color: white;
     height: 100%;
-   
-   
-  
-    
-    
-    
   }
-
+  
   aside a {
     display: block;
     text-decoration: none;
@@ -54,128 +43,87 @@
     
     
   }
-
-  ul{
-    list-style-type: none;
-   
-    
-  }
- 
-  main img{
-    height:400px;
-    padding-left: 15%;
-    padding-right: 0px;
-  }
-
+  
   aside img{
     position: relative;
     height :150px;
     left: 15px;
   
   }
-
-  header img{
-    height: 5%;
-    padding-left: 14%;
-    
-    
+  
+  header img {
+  height: 150px;
   }
   
-  header p{
-    padding-left: 15%;
+  img[src*="https://image.flaticon.com"] {
+  color: #00adee;
+  height: 40px;
+  padding: 3px;
+  
+  }
+  
+  img[src*="https://via.placeholder.com"] {
+  color: #00adee;
+  height: 400px;
+  
+  }
+  
+  main {
+  margin-left: 210px;
+  }
+  
+  #what-we-do h2 {
+  color: #8cc36f;
+  
+  }
+  
+  #what-we-do p {
+  border-right: 1px solid rgb(170,239,135,0.8);
+  }
+  
+  #our-work h2 {
+  color: #8cc36f;
+  
+  }
+  
+  #our-work p {
+  border-right: 1px solid rgb(170,239,135,0.8);
+  }
+  
+  #contact-us h2{
+  color: #8cc36f;
+  
+  }
+  
+  img[src*="stacked-logo.png"] {
+  height: 100px
+  
+  }
+  
+  aside a{
+  border-bottom: 2px solid #00ADEE;
+  text-decoration: none;
+  text-align: center;
+  color: #00ADEE;
+  position: relative;
+  
+  }
+  
+  aside nav{
+  font: sans-serif
+  
+  }
+  
+  section div{
+  width: 33%;
+  float: left;
+  padding: 20px;
+  
+  }
+  
+  ul {
+  list-style-type: none;
+  
   }
 
-div{
-  display: block;
-  padding-right: 1%;
-  
-}
-  
-#what-we-do{
-  padding-left: 15%;
-  padding-top: 25px;
-  
 
-}
-
-#what-we-do h2{
-  
-  color: #8CC36F;
- 
-  line-height: 25px;
-}
-
-#what-we-do p {
-  width: 400px;
-  border-right: 1px solid rgb(170, 239, 135, 0.8);
-  line-height: 25px;
-  font-size: 15px;
- 
- 
-}
-
-#our-work{
- padding-left: 45%;
- position: relative;
- top: -193px;
- 
-  
-}
-
-#our-work p {
-  width: 350px;
-  border-right: 1px solid rgb(170, 239, 135, 0.8);
-  line-height: 25px;
-  font-size: 15px;
-}
-
-#contact-us{
-  padding-left : 74%;
-  position: relative;
-  top: -387px;
-  padding-right: 0px;
-}
-#our-work h2 {
-  
-  color: #8CC36F;
-}
-
-#contact-us h2{
-  color: #8CC36F;
-}
-
-#contact-us p{
-  width: 350px;
-  font-size: 15px;
-}
-
-#social img {
-height: 30px;
-padding-left: 15%;
-position: relative;
-padding-right: 0px;
-bottom: 0px;
-margin: 0;
-padding-top: 0%;
-
-}
-
-footer p {
-  position: relative;
-  left: 15%;
-  bottom: 470px;
-  padding-right: 0px;
-}
-
-h3{
-  position: relative;
-  left:15%;
-  bottom: 60px;
-  padding-right: 0px;
-}
-
-footer div p{
-  Bottom: 75px;
-  left: 15%;
-  padding-right: 0px;
-}
