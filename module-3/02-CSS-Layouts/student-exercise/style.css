@@ -1,4 +1,4 @@
-:root {
+  :root {
     --blue: #00adee;
     --grey: #505355;
 }
@@ -13,47 +13,93 @@ html {
     font-size: 16px;
 }
 
-body{
-        display: grid;
-        grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-        grid-template-areas:
-          ". header header  nav   nav   ."
-          ". main   main    main  main  .";
-        grid-gap: 10px;
-      
+
+#student-grid{
+display: grid;
+grid-template-columns: 5fr 5fr 5fr;
+grid-template-areas:
+"student-quote student-quote student-picture"
+"student-profile student-profile student-contact"
+"experience experience experience";
+grid-row-gap: 20px;
+grid-column-gap: 50px;
 }
 
-header {
-    grid-area: header;
+#student-quote{
+  grid-area: student-quote;
+  display: flex;
+  margin-top: 50px;
+  color: var(--grey);
+}
+#student-picture{
+  grid-area: student-picture;
+}
+#student-profile{
+  grid-area: student-profile;
+}
+#student-contact{
+  grid-area: student-contact;
+}
+
+#experience {
+    grid-area: experience;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
   }
-  
-  nav {
-    grid-area: nav;
+
+  #experience div {
+    margin-right: 15px;
+    margin-left: 15px; 
+    width: 30%;
   }
-  main {
-    grid-area: main;  
+
+  #student-picture img {
+    border-radius: 50%;
   }
-  #order-now {
-    grid-area: fall-festival;
+
+  #student-contact{
+    color: var(--grey);
+    text-align: center;
   }
-  #store {
-    grid-area: store;
-  }
-  
+
   img {
     width: 100%;
   }
 
-  main {
-    display: flex;
-  }
-  
-  main img {
-    width: 75%;
-    height: 450px;
-    object-fit: cover;
-    padding-left: 500px;
-    border-radius: 30%;
+  #student-quote{
+    color: var(--grey);
+    text-align: center;
   }
 
+  
+
+  #student-contact p{
+    color : #00ADEE;
+    text-align :center;
+  }
+
+  
+#te-logo{
+  width: 25%;
+  margin:0;
+}
  
+
+  #experience h3 {
+    color: #505355;
+  }
+  
+  .fas fa-database{
+    color: #00ADEE;
+  }
+  
+  .fas fa-info{
+    color: #00ADEE;
+  }
+  
+  .fas fa-pallete {
+    color: #00ADEE;
+  }
