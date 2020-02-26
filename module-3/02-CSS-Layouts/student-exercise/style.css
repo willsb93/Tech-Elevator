@@ -41,6 +41,16 @@ grid-column-gap: 50px;
   grid-area: student-contact;
 }
 
+body{
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+main h1{
+  font-size: 60px;
+  color: #505355;
+}
+
 #experience {
     grid-area: experience;
     display: flex;
@@ -74,10 +84,15 @@ grid-column-gap: 50px;
     text-align: center;
   }
 
-  
+  #student-quote h2{
+    text-align: left;
+    font-size: 30px;
+    padding-top: 30px;
+    line-height: 150%;
+  }
 
   #student-contact p{
-    color : #00ADEE;
+    color : #505355;
     text-align :center;
   }
 
@@ -89,7 +104,7 @@ grid-column-gap: 50px;
  
 
   #experience h3 {
-    color: #505355;
+    color:#00ADEE;
   }
   
   .fas fa-database{
