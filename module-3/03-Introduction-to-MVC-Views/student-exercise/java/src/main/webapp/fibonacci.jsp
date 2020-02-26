@@ -9,30 +9,51 @@
 		<c:url var="fibonacciRoute" value="fibonacci.jsp">
 			<c:param value="${ numberOfItems }" name="max" />
 		</c:url>
-		<li>
-			<a href="<c:out value="${ fibonacciRoute }" />"><c:out value="${ numberOfItems }" /></a>
-		</li>
+		<li><a href="<c:out value="${ fibonacciRoute }" />"><c:out
+					value="${ numberOfItems }" /></a></li>
 
 		<c:set var="numberOfItems" value="50" />
 		<c:url var="fibonacciRoute" value="fibonacci.jsp">
 			<c:param value="${ numberOfItems }" name="max" />
 		</c:url>
-		<li>
-			<a href="<c:out value="${ fibonacciRoute }" />"><c:out value="${ numberOfItems }" /></a>
-		</li>
+		<li><a href="<c:out value="${ fibonacciRoute }" />"><c:out
+					value="${ numberOfItems }" /></a></li>
 
 		<c:set var="numberOfItems" value="100" />
 		<c:url var="fibonacciRoute" value="fibonacci.jsp">
 			<c:param value="${ numberOfItems }" name="max" />
 		</c:url>
-		<li>
-			<a href="<c:out value="${ fibonacciRoute }" />"><c:out value="${ numberOfItems }" /></a>
-		</li>
+		<li><a href="<c:out value="${ fibonacciRoute }" />"><c:out
+					value="${ numberOfItems }" /></a></li>
 	</ul>
 </nav>
 
-<%--
-	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
- --%>
+<ul id="fibonacci">
+	
+	<c:set var="number1" value="0" />
+	<c:set var="number2" value="1" />
 
-<c:import url="common/footer.jsp"></c:import>
+	<c:forEach begin="1" end="${param.number}" var="number">
+		
+		<c:choose>
+		
+		<c:set var="numberAdded" value="${ number1 + number2}" />
+		<c:when test = "${numberAdded < ${param.max }">
+		
+		
+		<li class="numberAdded">${numberAdded}</li>
+			<c:set var="number1" value="${number2}" />
+				<c:set var="number2" value="${numberAdded}" />
+		</c:when>		
+		
+			
+		
+		</c:choose>	
+		
+	
+	</c:forEach>
+	
+</ul>	
+
+
+		<c:import url="common/footer.jsp"></c:import>
