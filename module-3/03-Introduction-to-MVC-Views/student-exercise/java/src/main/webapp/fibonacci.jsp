@@ -30,23 +30,25 @@
 
 <ul id="fibonacci">
 
-	<c:set var="number1" value="0" />
-	<c:set var="number2" value="1" />
+	<c:set var="A" value="0" />
+	<c:set var="B" value="1" />
+	<c:set var="numberAdded" value="0" />
 
-	<c:forEach begin="1" end="${param.max}">
+	<c:forEach begin="0" end="${param.max }">
+		<c:choose>
+			<c:when test="${numberAdded <= param.max }">
+
+				<li>${numberAdded}</li>
+
+				<c:set var="A" value="${B}" />
+				<c:set var="B" value="${numberAdded}" />
+				<c:set var="numberAdded" value="${A + B}" />
+
+			</c:when>
 
 
-
-		<c:set var="numberAdded" value="${ number1 + number2}" />
-
-		<li><c:out value="${numberAdded}" /><li>
-	
-		 <c:set var="number1" value="${number2}"/> 
-	 	<c:set var="number2" value="${numberAdded}" />
-	 
-	 </c:forEach>
-
+		</c:choose>
+	</c:forEach>
 </ul>
-
 
 <c:import url="common/footer.jsp"></c:import>
