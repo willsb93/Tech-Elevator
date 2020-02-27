@@ -43,9 +43,7 @@
 				<c:set var="rowClassAtrribute" value="Buzz!" />
 				<li class="buzz">Buzz!</li>
 			</c:when>
-			<c:otherwise>
-				<li>${ number }</li>
-			</c:otherwise>
+			
 		</c:choose>
 	</c:forEach>
 </ul>
