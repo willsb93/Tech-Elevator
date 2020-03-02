@@ -62,7 +62,7 @@ public class Exercises {
 		List<String> no4Words = new ArrayList<String>();
 		for (int i = 0; i < stringArray.length; i++) {
 
-			if (stringArray[i].length() < 4 || stringArray[i].length() > 4) {
+			if (stringArray[i].length() != 4) {
 				no4Words.add(stringArray[i]);
 			}
 		}
