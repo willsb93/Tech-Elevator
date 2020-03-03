@@ -4,14 +4,17 @@
 
 <%@include file="common/header.jspf"%>
 
+
+<c:url value="/searchCustomer" var="formAction"/>
+
 <form method="GET" class = "form-inline" action="${formAction}">
 
-<input name = "searchCustomer" type = "text" placeholder = "search" />
+<input name = "search" type = "text" placeholder = "search" />
 <label for = "sort"> Sort: </label>
 
 <select name = "sort" >
 
-<option value = "lastName"> Last Name</option>
+<option value = "last_name"> Last Name</option>
 <option value = "email"> E-mail</option>
 <option value = "active"> Active </option>
 
@@ -19,7 +22,7 @@
 
 <%-- maybe have to add divs? --%>
 
-<input name = "submit" value = "searchCustomer" type = "submit" class = "btn"/>
+<input name = "submit" value = "submit" type = "submit" class = "btn"/>
 
 </form>
 

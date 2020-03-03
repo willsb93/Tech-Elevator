@@ -4,6 +4,9 @@
 
 <%@include file="common/header.jspf"%>
 
+
+<c:url value="/searchCustomer" var="formAction"/>
+
 <form method="GET" class = "form-inline" action="${formAction}">
 
 <label for = "maximumLenght"> Maximum Length: </label><input name = "maximumLength" />
@@ -25,7 +28,7 @@
 
 <%-- maybe have to add divs? --%>
 
-<input name = "submit" value = "searchFilm" type = "submit" class = "btn"/>
+<input name = "submit" value = "submit" type = "submit" class = "btn"/>
 
 </form>
 

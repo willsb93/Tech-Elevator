@@ -24,8 +24,8 @@ public class CustomerSearchController {
     
 
     @RequestMapping(path = "/searchCustomer", method = RequestMethod.GET)
-    public String searchCustomers(@RequestParam String search, @RequestParam String sortBy, ModelMap model) {
-        model.put("customers", customerDao.searchAndSortCustomers(search, sortBy));
+    public String searchCustomers(@RequestParam String search, String sort, ModelMap model) {
+        model.put("customers", customerDao.searchAndSortCustomers(search, sort));
         return "customerList";
     }
     
