@@ -25,7 +25,7 @@
 
 <%-- maybe have to add divs? --%>
 
-<input name = "submit" value = "search" type = "submit" class = "btn"/>
+<input name = "submit" value = "searchFilm" type = "submit" class = "btn"/>
 
 </form>
 

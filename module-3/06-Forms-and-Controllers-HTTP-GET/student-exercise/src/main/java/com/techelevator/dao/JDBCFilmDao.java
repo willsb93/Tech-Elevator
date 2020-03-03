@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.sql.DataSource;
 
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -21,7 +22,12 @@ public class JDBCFilmDao implements FilmDao {
 
     @Autowired
     public JDBCFilmDao(DataSource datasource) {
-        this.jdbcTemplate = new JdbcTemplate(datasource);
+    	((BasicDataSource) datasource).setUrl("jdbc:postgresql://localhost:5432/dvdstore");
+		((BasicDataSource) datasource).setUsername("postgres");
+		((BasicDataSource) datasource).setPassword("postgres1");
+    	
+    	
+    	this.jdbcTemplate = new JdbcTemplate(datasource);
     }
 
     @Override

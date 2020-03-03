@@ -6,12 +6,12 @@
 <!-- Form goes here -->
 
 
-<c:url var="formAction" value="/actorList" />
 
+<c:url value="/search" var="formAction"/>
 
-<form method="GET" class = "form-inline" >
+<form method="GET" class = "form-inline" action="${formAction}">
     <input class="form-control" name="search" placeholder="search">
-    <input class="btn" name="submit" value="Submit" type="submit"/>
+    <input class="btn" name="submit" value="submit" type="submit"/>
 
 </form>
 

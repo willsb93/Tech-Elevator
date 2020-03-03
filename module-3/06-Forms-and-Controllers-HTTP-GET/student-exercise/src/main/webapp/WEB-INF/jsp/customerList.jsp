@@ -6,7 +6,7 @@
 
 <form method="GET" class = "form-inline" action="${formAction}">
 
-<input name = "search" type = "text" placeholder = "search" />
+<input name = "searchCustomer" type = "text" placeholder = "search" />
 <label for = "sort"> Sort: </label>
 
 <select name = "sort" >
@@ -19,7 +19,7 @@
 
 <%-- maybe have to add divs? --%>
 
-<input name = "submit" value = "search" type = "submit" class = "btn"/>
+<input name = "submit" value = "searchCustomer" type = "submit" class = "btn"/>
 
 </form>
 
@@ -31,18 +31,18 @@
 <th>Active</th>
 </tr>
 
-<c:forEach items = "${customers}" var = "customers">
+<c:forEach items = "${customers}" var = "customer">
 
 <tr>
-<td><c:out value = "${customers.firstName}"/> <c:out value = "${customers.lastName}"/></td>
-<td><c:out value = "${customers.email}"/></td>
-<td><c:out value = "${customers.active ?}" /></td> <%-- loop to see if its true or false --%>
+<td><c:out value = "${customer.firstName}"/> <c:out value = "${customer.lastName}"/></td>
+<td><c:out value = "${customer.email}"/></td>
+ <%-- loop to see if its true or false <td><c:out value = "${customers.active ?}" /></td>--%>
 </tr>
 
 </c:forEach>
 
 </table>
 
-</form>
+
 
 <%@include file="common/footer.jspf"%>

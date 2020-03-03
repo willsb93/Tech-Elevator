@@ -16,13 +16,18 @@ public class FilmSearchController {
 
     @Autowired
     FilmDao filmDao;
-    @RequestMapping ("/filmList")
+  
+    
+    @RequestMapping(path = "/filmList", method = RequestMethod.GET)
     public String showFilmSearchForm() {
         return "filmList";
     }
 
-    public String searchFilms() {
-        return null;
+    @RequestMapping(path = "/searchFilm", method = RequestMethod.GET)
+    public String searchFilms(@RequestParam(defaultValue = "0") int minimumLength,
+            @RequestParam(defaultValue = "1000") int maximumLength, @RequestParam String genre, ModelMap modelHolder) {
+        modelHolder.put("films", filmDao.getFilmsBetween(genre, minimumLength, maximumLength));
+        return "filmList";
     }
 
 }

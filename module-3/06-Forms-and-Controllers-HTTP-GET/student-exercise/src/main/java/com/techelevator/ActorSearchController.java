@@ -22,7 +22,7 @@ public class ActorSearchController {
 
 	/* What request mapping do we want here */
 	
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(path = "/actorList", method = RequestMethod.GET)
 	public String showSearchActorForm() {
 		return "actorList";
 	}
