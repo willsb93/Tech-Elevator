@@ -17,11 +17,34 @@ import org.springframework.stereotype.Component;
 @Component
 public class JDBCCustomerDao implements CustomerDao {
 
-    private JdbcTemplate jdbcTemplate;
+	private JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    public JDBCCustomerDao(DataSource dataSource) {
-        jdbcTemplate = new JdbcTemplate(dataSource);
-    }
+	@Autowired
+	public JDBCCustomerDao(DataSource dataSource) {
+		jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+
+	@Override
+	public List<Customer> searchAndSortCustomers(String search, String sort) {
+		// TODO Auto-generated method stub
+		List<Customer> customers = new ArrayList<>();
+
+		String searchSql = "SELECT * FROM customer WHERE first_name ? OR last_name ? ORDER BY " + sort;
+		SqlRowSet results = jdbcTemplate.queryForRowSet(searchSql, search, search);
+		while (results.next()) {
+			customers.add(mapRowToCustomer(results));
+		}
+
+		return customers;
+	}
+
+	private Customer mapRowToCustomer(SqlRowSet results) {
+		Customer customer = new Customer();
+		customer.setFirstName(results.getString("first_name"));
+		customer.setLastName(results.getString("last_name"));
+		customer.setEmail(results.getString("email"));
+		customer.setActive(results.getBoolean("activebool"));
+		return customer;
+	}
 
 }

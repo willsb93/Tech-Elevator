@@ -6,16 +6,29 @@
 <!-- Form goes here -->
 
 
+<c:url var="formAction" value="/actorList" />
 
+
+<form method="GET" class = "form-inline" >
+    <input class="form-control" name="search" placeholder="search">
+    <input class="btn" name="submit" value="Submit" type="submit"/>
+
+</form>
 
 
 <table class="table">
 <tr>
 <th>Name</th>
 </tr>
-<c:forEach items="${actors}" var="actor">
+<c:forEach items="${actor}" var="actor">
 <tr>
     <!-- What do we print here for each actor? -->
+    <td> 
+    
+    	<c:out value = "${actor.firstName}" /> 
+    	 <c:out value = "${actor.lastName}" />
+    	 
+    </td>	 
 </tr>
 </c:forEach>
 </table>
