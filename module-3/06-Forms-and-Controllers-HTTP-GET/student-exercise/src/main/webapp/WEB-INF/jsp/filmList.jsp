@@ -5,7 +5,7 @@
 <%@include file="common/header.jspf"%>
 
 
-<c:url value="/searchCustomer" var="formAction"/>
+<c:url value="/searchFilm" var="formAction"/>
 
 <form method="GET" class = "form-inline" action="${formAction}">
 

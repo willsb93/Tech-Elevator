@@ -39,7 +39,11 @@
 <tr>
 <td><c:out value = "${customer.firstName}"/> <c:out value = "${customer.lastName}"/></td>
 <td><c:out value = "${customer.email}"/></td>
- <%-- loop to see if its true or false <td><c:out value = "${customers.active ?}" /></td>--%>
+<td> <c:if test="${!customer.active}"><c:out value = "No"/></c:if> <c:if test="${customer.active}"><c:out value = "Yes"/></c:if></td>
+ 
+ 
+ 
+ <%-- loop to see if its true or false --%>
 </tr>
 
 </c:forEach>

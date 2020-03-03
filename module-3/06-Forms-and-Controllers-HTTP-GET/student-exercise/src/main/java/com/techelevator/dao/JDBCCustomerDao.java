@@ -49,7 +49,7 @@ public class JDBCCustomerDao implements CustomerDao {
 		customer.setFirstName(results.getString("first_name"));
 		customer.setLastName(results.getString("last_name"));
 		customer.setEmail(results.getString("email"));
-		customer.setActive(results.getBoolean("activebool"));
+		customer.setActive(results.getBoolean("active"));
 		return customer;
 	}
 
