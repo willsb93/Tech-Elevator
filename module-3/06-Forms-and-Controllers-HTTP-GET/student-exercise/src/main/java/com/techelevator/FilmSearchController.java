@@ -28,7 +28,7 @@ public class FilmSearchController {
 
     @RequestMapping(path = "/searchFilm", method = RequestMethod.GET)
     public String searchFilms(HttpServletRequest request, @RequestParam(defaultValue = "0") int minimumLength,
-            @RequestParam(defaultValue = "1000") int maximumLength, @RequestParam String genre, ModelMap modelHolder) {
+            @RequestParam(defaultValue = "500") int maximumLength, @RequestParam String genre, ModelMap modelHolder) {
         modelHolder.put("films", filmDao.getFilmsBetween(genre, minimumLength, maximumLength));
         return "filmList";
     }

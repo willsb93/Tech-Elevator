@@ -6,6 +6,11 @@
 		<title>Hello Spring MVC</title>
 	</head>
 	<body>
-		<h1>Hello, <c:out value="${param.name}" />!</h1>
+		
+		
+		<c:url var = "forDummies" value = "/etc/forDummies.png" />
+		<img src ="">
+		
+		<h1>Hello, <c:out value="${param.forDummies}" />!</h1>
 	</body>
 </html>
