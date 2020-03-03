@@ -1,6 +1,9 @@
 package com.techelevator;
 
 import com.techelevator.dao.FilmDao;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -19,12 +22,12 @@ public class FilmSearchController {
   
     
     @RequestMapping(path = "/filmList", method = RequestMethod.GET)
-    public String showFilmSearchForm() {
+    public String showFilmSearchForm(HttpServletRequest request) {
         return "filmList";
     }
 
     @RequestMapping(path = "/searchFilm", method = RequestMethod.GET)
-    public String searchFilms(@RequestParam(defaultValue = "0") int minimumLength,
+    public String searchFilms(HttpServletRequest request, @RequestParam(defaultValue = "0") int minimumLength,
             @RequestParam(defaultValue = "1000") int maximumLength, @RequestParam String genre, ModelMap modelHolder) {
         modelHolder.put("films", filmDao.getFilmsBetween(genre, minimumLength, maximumLength));
         return "filmList";

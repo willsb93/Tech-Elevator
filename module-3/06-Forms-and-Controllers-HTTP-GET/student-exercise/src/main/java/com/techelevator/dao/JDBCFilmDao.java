@@ -22,11 +22,7 @@ public class JDBCFilmDao implements FilmDao {
 
     @Autowired
     public JDBCFilmDao(DataSource datasource) {
-    	((BasicDataSource) datasource).setUrl("jdbc:postgresql://localhost:5432/dvdstore");
-		((BasicDataSource) datasource).setUsername("postgres");
-		((BasicDataSource) datasource).setPassword("postgres1");
-    	
-    	
+    
     	this.jdbcTemplate = new JdbcTemplate(datasource);
     }
 

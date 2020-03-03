@@ -23,12 +23,12 @@ public class ActorSearchController {
 	/* What request mapping do we want here */
 	
 	@RequestMapping(path = "/actorList", method = RequestMethod.GET)
-	public String showSearchActorForm() {
+	public String showSearchActorForm(HttpServletRequest request) {
 		return "actorList";
 	}
 
 	@RequestMapping(path = "/search", method = RequestMethod.GET)
-	public String searchActors(@RequestParam String search, ModelMap model) {
+	public String searchActors(HttpServletRequest request, @RequestParam String search, ModelMap model) {
 		/* Call the model and pass values to the jsp */
 		model.put("actor", actorDao.getMatchingActors(search));
 		return "actorList";

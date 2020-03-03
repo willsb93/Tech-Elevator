@@ -22,11 +22,7 @@ public class JDBCCustomerDao implements CustomerDao {
 
 	@Autowired
 	public JDBCCustomerDao(DataSource dataSource) {
-		((BasicDataSource) dataSource).setUrl("jdbc:postgresql://localhost:5432/dvdstore");
-		((BasicDataSource) dataSource).setUsername("postgres");
-		((BasicDataSource) dataSource).setPassword("postgres1");
-		
-		
+	
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
