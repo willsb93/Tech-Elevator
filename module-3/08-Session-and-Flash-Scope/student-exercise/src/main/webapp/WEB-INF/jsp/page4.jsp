@@ -8,9 +8,9 @@
    
     
     <h1>Your Favorite Things:</h1>
-		<h2>Favorite Color: ${favoriteThings.color}</h2>
-		<h2>Favorite Food:  ${favoritesThings.food}</h2>
-		<h2>Favorite Season: ${favoritesThings.season}</h2>
+		<h3>Favorite Color: ${favoriteThings.color}</h3>
+		<h3>Favorite Food:  ${favoriteThings.food}</h3>
+		<h3>Favorite Season: ${favoriteThings.season}</h3>
 		
 	
 		
