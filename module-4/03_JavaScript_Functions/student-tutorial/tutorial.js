@@ -15,7 +15,9 @@ function turnOn() {
  *
  * @returns {string} your name
  */
-
+function returnsName() {
+  return 'William';
+}
 /**
  * Create a function called returnGivenParameter that takes a
  * single parameter and then returns it.
@@ -23,7 +25,9 @@ function turnOn() {
  * @param {any} thing any value
  * @returns {any} the parameter that we were given
  */
-
+function returnGivenParameter (x) {
+  return x;
+}
 /**
  * Now create a function called takeOptionalParameter
  * that takes a single parameter and
@@ -33,7 +37,10 @@ function turnOn() {
  * @param {any} [thing=0] any value
  * @returns {any} the parameter given, or 0 if none is given
  */
-
+function takeOptionalParameter (x = 0){
+  return x;
+  
+}
 /**
  * Write an anonymous function in the filter that will
  * remove all numbers that are double digits.
@@ -47,7 +54,9 @@ function turnOn() {
  */
 function filterArrayToOnlySingleDigitNumbers(arrayToFilter) {
   return arrayToFilter.filter(
-    // WRITE CODE HERE
+    (x) => {
+      return x < 10 && x > -10;
+    }
   );
 }
 
@@ -63,7 +72,9 @@ function filterArrayToOnlySingleDigitNumbers(arrayToFilter) {
  */
 function mapArrayToDoubleAllNumbers(arrayToDouble) {
   return arrayToDouble.map(
-    // WRITE CODE HERE
+   (x) => {
+     return x * 2;
+   }
   );
 }
 
@@ -80,7 +91,9 @@ function mapArrayToDoubleAllNumbers(arrayToDouble) {
  */
 function reduceArrayToFindProduct(arrayToMultiply) {
   return arrayToMultiply.reduce(
-    // WRITE CODE HERE
+    (currentResult, x) => {
+        return currentResult * x;
+    }
   );
 }
 
@@ -93,8 +106,9 @@ function reduceArrayToFindProduct(arrayToMultiply) {
  */
 function filterStringArrayForSon(arrayToFilter) {
   return arrayToFilter.filter(
-    // WRITE CODE HERE
-  );
+(x) => {
+    return x.includes('son');
+}  );
 }
 
 /**
@@ -106,8 +120,9 @@ function filterStringArrayForSon(arrayToFilter) {
  */
 function makeNamesAllCaps(arrayToCapitalize) {
   return arrayToCapitalize.map(
-    // WRITE CODE HERE
-  );
+(x) => {
+  return x.toUpperCase();
+}  );
 }
 
 /*
@@ -121,7 +136,15 @@ function makeNamesAllCaps(arrayToCapitalize) {
  * Also be sure to document the return type and what it's returning.
  */
 
-function convertTemperature(temperature, temperatureUnit, includeUnit = false) {
+/**
+ * 
+ * @param {number} temperature 
+ * @param {number} temperatureUnit 
+ * @param {boolean} includeUnit 
+ * 
+ */
+
+ function convertTemperature(temperature, temperatureUnit, includeUnit = false) {
   let convertedTemp = 0;
   let convertedUnit = 'F';
   if (temperatureUnit === 'C' || temperatureUnit === 'c') {
