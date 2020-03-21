@@ -131,3 +131,38 @@ main {
 footer {
   grid-area: footer;
 }
+
+@media only screen and (min-width: 725px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    flex-basis: 30%;
+  }
+
+  main .tweet {
+    flex-basis: 45%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    grid-template-columns: 2em 1fr 1fr 2em;
+    grid-template-areas:
+      '. header nav .'
+      '. content content .'
+      '. footer footer .';
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .tweet {
+    flex-basis: 29%;
+  }
+}

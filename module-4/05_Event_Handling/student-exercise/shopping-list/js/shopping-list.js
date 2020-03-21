@@ -21,7 +21,6 @@ function setPageTitle() {
   const title = document.getElementById('title');
   title.innerText = pageTitle;
 }
-
 /**
  * This function will loop over the array of groceries that was set above and add them to the DOM.
  */
