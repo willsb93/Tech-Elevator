@@ -24,3 +24,30 @@ function displayReviews() {
       console.error('Your browser does not support templates');
     }
 }
+
+function loadReviews() {
+
+  fetch('data.json')
+    .then (response =>{
+        return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      reviews = data;
+      displayReviews();
+    })
+    .catch(error => {
+      console.log(error);
+    })
+}
+
+function handleReviewsButtonClick(event){
+  loadReviews();
+  event.target.disabled = true;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const loadButton = document.querySelector('button').addEventListener('click', handleReviewsButtonClick);
+
+});
