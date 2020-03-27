@@ -11,7 +11,7 @@
 export default {
   data() {
     return {
-      todo: [
+      todos: [
           'Wake up',
           '5 Minute Morning Movement',
           'Meditate',
