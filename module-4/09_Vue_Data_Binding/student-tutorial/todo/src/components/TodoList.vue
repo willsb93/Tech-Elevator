@@ -2,11 +2,7 @@
     <div class="todo-list">
         <h1>My Daily Routine</h1>
         <ul>
-            <li>Wake Up</li>
-            <li>5 Minute Morning Movement</li>
-            <li>Meditate</li>
-            <li>Brush Teeth</li>
-            <li>Shower</li>
+            <li v-for="todo in todos" v-bind:key="todo">{{todo}}</li>
         </ul>
     </div>
 </template>
@@ -15,7 +11,13 @@
 export default {
   data() {
     return {
-    
+      todo: [
+          'Wake up',
+          '5 Minute Morning Movement',
+          'Meditate',
+          'Brush Teeth',
+          'Shower'
+      ]
     }
   }
 }
