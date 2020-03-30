@@ -262,4 +262,5 @@ export default {
 .results h3:not(:first-child) {
   margin-top: 20px;
 }
+
 </style>
