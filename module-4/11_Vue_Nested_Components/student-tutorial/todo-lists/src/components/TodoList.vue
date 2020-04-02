@@ -2,25 +2,41 @@
     <div class="todo-list">
         <h1>{{this.title}}</h1>
         <ul>
-            <li v-for="todo in todos" 
-                v-bind:key="todo.id" 
-                v-bind:class="{'todo-completed': todo.completed}" 
-                v-on:click="changeStatus(todo.id, $event)">
-                <input type="checkbox"/>
-                {{todo.task}} <i class="far fa-check-circle" v-bind:class="{completed: todo.completed}"></i>
-            </li>
+            <todo-list title="My Work Todo's" v-bind:todos="work" v-bind:search="search" ></todo-list>
+<todo-list title="My Personal Todo's" v-bind:todos="personal" v-bind:search="search" ></todo-list>
+<todo-list title="My Household Todo's" v-bind:todos="household" v-bind:search="search" ></todo-list>
+          <li v-for="todo in filteredTasks"
+    v-bind:key="todo.id"
+    v-bind:class="{'todo-completed': todo.completed}"
+    v-on:click="changeStatus(todo.id, $event)">
+    <input type="checkbox"/>
+    {{todo.task}} <i class="far fa-check-circle" v-bind:class="{completed: todo.completed}"></i>
+</li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
+    data() {
+    return {
+      search: '',
+      work: [],
+      personal: [],
+      household: []
+    }},
+
     props: {
         title: String,
         search: String,
         todos: Array
     },
     methods: {
+
+        handleSearch(query) {
+        console.log('Filter Tasks: ', query);
+        this.search = query;},
+
         changeStatus(id,event) {
             const arrIndex = this.todos.findIndex((todo) => todo.id == id);
             this.todos[arrIndex].completed = !this.todos[arrIndex].completed;
@@ -31,6 +47,8 @@ export default {
                 checkbox.checked = !checkbox.checked;
             }
         }
+
+        
     }
 }
 </script>
